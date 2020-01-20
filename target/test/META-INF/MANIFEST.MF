@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven 3.6.1
+Built-By: alewatts
+Build-Jdk: 11.0.1
+Class-Path: lib/javassist-3.18.1-GA.jar
+Specification-Title: bind
+Specification-Version: 1.0-SNAPSHOT
+Implementation-Title: bind
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: com.ajw
+Agent-Class: MyJavaAgent
+Can-Redefine-Classes: true
+Can-Retransform-Classes: true
+
