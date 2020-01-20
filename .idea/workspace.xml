@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c368f453-3bea-40ac-8e29-8c68e65bb84f" name="Default Changelist" comment="" />
+    <list default="true" id="c368f453-3bea-40ac-8e29-8c68e65bb84f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BindRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BindRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CalculateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CalculateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DynamicCodeInsertion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DynamicCodeInsertion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MyJavaAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyJavaAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BindRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BindRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CalculateTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CalculateTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/DynamicCodeInsertion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DynamicCodeInsertion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/MyJavaAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MyJavaAgent.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,15 +27,20 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenRunner">
     <option name="jreName" value="11 (2)" />
   </component>
   <component name="ProjectId" id="1WWjZVwajXKf4lSbd4cRLdhZr4c" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/META-INF" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.16615385" />
     <property name="project.structure.side.proportion" value="0.21538462" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
@@ -111,42 +128,41 @@
       <updated>1579272301074</updated>
       <workItem from="1579272306294" duration="516000" />
       <workItem from="1579272902326" duration="9858000" />
-      <workItem from="1579513811306" duration="4270000" />
+      <workItem from="1579513811306" duration="6191000" />
+      <workItem from="1579535157794" duration="8516000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/MyJavaAgent.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/test/java/DynamicCodeInsertion.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/DynamicCodeInsertion.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/DynamicCodeInsertion.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="12" />
+          <url>file://$PROJECT_DIR$/src/test/java/BindRunner.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="JUnit">
-        <watch expression="new DynamicCodeInsertion().dynamicallyInsertCode()" />
-        <watch expression="new DynamicCodeInsertion()" />
-        <watch expression="e" />
-        <watch expression="cc.toBytecode()" />
-        <watch expression="cc.isFrozen()" language="JAVA" />
-        <watch expression="cc.defrost()" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

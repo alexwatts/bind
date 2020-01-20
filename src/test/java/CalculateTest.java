@@ -3,11 +3,10 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-
 @RunWith(BindRunner.class)
 public class CalculateTest {
 
-    @TestOf(clazz = Calculate.class, name = "addTogether")
+    //@TestOf(clazz = Calculate.class, name = "addTogether")
     @Test
     public void testAdd() {
         int one = 1;

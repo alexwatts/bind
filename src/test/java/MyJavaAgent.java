@@ -1,3 +1,4 @@
+import java.lang.instrument.ClassFileTransformer;
 import java.lang.instrument.Instrumentation;
 
 public class MyJavaAgent {
@@ -17,7 +18,6 @@ public class MyJavaAgent {
     public static void premain(String args, Instrumentation inst) throws Exception {
 
         instrumentation = inst;
-        //instrumentation.addTransformer(new MyClassFileTransformer());
     }
 
     /**
@@ -31,9 +31,15 @@ public class MyJavaAgent {
      * @throws Exception
      */
     public static void agentmain(String args, Instrumentation inst) throws Exception {
-
         instrumentation = inst;
-        //instrumentation.addTransformer(new MyClassFileTransformer());
+    }
+
+    public static void addTransformer(ClassFileTransformer transformer) {
+        instrumentation.addTransformer(transformer);
+    }
+
+    public static void removeTransformer(ClassFileTransformer transformer) {
+        instrumentation.removeTransformer(transformer);
     }
 
     /**

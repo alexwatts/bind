@@ -1,9 +1,12 @@
-import java.io.IOException;
 import java.lang.annotation.Annotation;
+import java.lang.instrument.ClassFileTransformer;
+import java.lang.instrument.IllegalClassFormatException;
 import java.lang.reflect.Method;
+import java.security.ProtectionDomain;
 import java.util.HashMap;
-import javassist.CannotCompileException;
-import javassist.NotFoundException;
+import javassist.ClassPool;
+import javassist.CtClass;
+import javassist.CtMethod;
 import org.junit.AssumptionViolatedException;
 import org.junit.Test;
 import org.junit.runner.Description;
@@ -20,15 +23,7 @@ public class BindRunner extends Runner {
         this.testClass = testClass;
         methodDescriptions = new HashMap<>();
         MyJavaAgent.initialize();
-        try {
-            new DynamicCodeInsertion().dynamicallyInsertCode();
-        } catch (CannotCompileException e) {
-            e.printStackTrace();
-        } catch (NotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
     }
 
     public Description getDescription() {
@@ -58,17 +53,46 @@ public class BindRunner extends Runner {
     public void run(RunNotifier runNotifier) {
 
         try {
+
+            ClassPool cp = ClassPool.getDefault();
+
+
             Object instance = testClass.newInstance();
 
             methodDescriptions.forEach((method, description) ->
             {
                 try {
+
+                    CtClass cc = cp.get("Calculate");
+
+
+                    // Without the call to "makePackage()", package information is lost
+                    cp.makePackage(cp.getClassLoader(), "");
+                    CtMethod m = cc.getDeclaredMethod("addTogether");
+
+
+                    m.insertBefore("{System.out.print(\"Oh, say no to \");}");
+                    m.insertAfter("{System.out.print(\"And say - Hi World\");}");
+                    // Changes are not persisted without a call to "toClass()"
+
+                    final byte[] bytes = cc.toBytecode();
+
+                    MyJavaAgent.addTransformer(
+                            new ClassFileTransformer() {
+                                @Override
+                                public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
+                                    if (className != null && className.equals("Calculate")) {
+                                        return bytes;
+                                    } else {
+                                        return classfileBuffer;
+                                    }
+                                }
+                            }
+
+                    );
+
                     runNotifier.fireTestStarted(description);
-
-
-
                     method.invoke(instance);
-
                     runNotifier.fireTestFinished(description);
                 }
                 catch(AssumptionViolatedException e) {
@@ -88,4 +112,6 @@ public class BindRunner extends Runner {
             e.printStackTrace();
         }
     }
+
+
 }
