@@ -1,6 +1,7 @@
 DynamicCodeInsertion.class
-MyJavaAgentLoader.class
-MyJavaAgent.class
 SomeClass.class
+MyJavaAgentLoader.class
+IntTransformer.class
+MyJavaAgent.class
 CalculateTest.class
 BindRunner.class

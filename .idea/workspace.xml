@@ -2,17 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c368f453-3bea-40ac-8e29-8c68e65bb84f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/IntTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_23_1_GA.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quondam.iml" beforeDir="false" afterPath="$PROJECT_DIR$/quondam.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Bananna.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Calculate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Calculate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TestOf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestOf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BindRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BindRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CalculateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CalculateTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/DynamicCodeInsertion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DynamicCodeInsertion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MyJavaAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyJavaAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MyJavaAgentLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyJavaAgentLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SomeClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bind-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/bind-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Bananna.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Calculate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Calculate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TestOf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestOf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/CalculateTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/CalculateTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-CalculateTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-CalculateTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/BindRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BindRunner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/CalculateTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CalculateTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/DynamicCodeInsertion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DynamicCodeInsertion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/MyJavaAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MyJavaAgent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/MyJavaAgentLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MyJavaAgentLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SomeClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/test/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test/META-INF/maven/com.ajw/bind/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test/META-INF/maven/com.ajw/bind/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test/META-INF/maven/com.ajw/bind/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test/META-INF/maven/com.ajw/bind/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test/TestOf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test/TestOf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test/bind-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/test/bind-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +59,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenRunner">
-    <option name="jreName" value="11 (2)" />
+    <option name="jreName" value="12" />
   </component>
   <component name="ProjectId" id="1WWjZVwajXKf4lSbd4cRLdhZr4c" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -40,21 +68,24 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/META-INF" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.16615385" />
     <property name="project.structure.side.proportion" value="0.21538462" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/test/resources/META-INF" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/META-INF" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/META-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -69,7 +100,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CalculateTest (1)">
+  <component name="RunManager" selected="JUnit.CalculateTest.testAdd">
     <configuration name="CalculateTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="quondam" />
       <option name="PACKAGE_NAME" value="" />
@@ -82,7 +113,7 @@
     <configuration name="CalculateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="quondam" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/Downloads/openJDK-11.0.1_1_macosx" />
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../Downloads/openJDK-11.0.1_1_macosx" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CalculateTest" />
       <option name="METHOD_NAME" value="" />
@@ -99,6 +130,8 @@
       <option name="MAIN_CLASS_NAME" value="CalculateTest" />
       <option name="METHOD_NAME" value="testAdd" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea -Djdk.attach.allowAttachSelf=true" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -110,9 +143,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CalculateTest.testAdd" />
         <item itemvalue="JUnit.CalculateTest (1)" />
         <item itemvalue="JUnit.CalculateTest" />
-        <item itemvalue="JUnit.CalculateTest.testAdd" />
       </list>
     </recent_temporary>
   </component>
@@ -153,16 +186,23 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/DynamicCodeInsertion.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/src/test/java/MyJavaAgent.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/BindRunner.java</url>
-          <line>84</line>
-          <option name="timeStamp" value="45" />
+          <line>69</line>
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="Thread.currentThread().getContextClassLoader()" language="JAVA" />
+        <watch expression="cp.get(&quot;Calculate&quot;)" />
+        <watch expression="calculate.add(one, two)" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

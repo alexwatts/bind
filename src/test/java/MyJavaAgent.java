@@ -1,5 +1,7 @@
+import java.lang.instrument.ClassDefinition;
 import java.lang.instrument.ClassFileTransformer;
 import java.lang.instrument.Instrumentation;
+import java.lang.instrument.UnmodifiableClassException;
 
 public class MyJavaAgent {
 
@@ -40,6 +42,11 @@ public class MyJavaAgent {
 
     public static void removeTransformer(ClassFileTransformer transformer) {
         instrumentation.removeTransformer(transformer);
+    }
+
+    public static void redefineClass(ClassDefinition classDefinition)
+            throws UnmodifiableClassException, ClassNotFoundException {
+        instrumentation.redefineClasses(classDefinition);
     }
 
     /**

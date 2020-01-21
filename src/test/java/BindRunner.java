@@ -1,18 +1,23 @@
 import java.lang.annotation.Annotation;
+import java.lang.instrument.ClassDefinition;
 import java.lang.instrument.ClassFileTransformer;
 import java.lang.instrument.IllegalClassFormatException;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.security.ProtectionDomain;
 import java.util.HashMap;
 import javassist.ClassPool;
 import javassist.CtClass;
 import javassist.CtMethod;
+import javassist.NotFoundException;
 import org.junit.AssumptionViolatedException;
 import org.junit.Test;
 import org.junit.runner.Description;
 import org.junit.runner.Runner;
 import org.junit.runner.notification.Failure;
 import org.junit.runner.notification.RunNotifier;
+
+import static junit.framework.TestCase.fail;
 
 public class BindRunner extends Runner {
 
@@ -23,7 +28,6 @@ public class BindRunner extends Runner {
         this.testClass = testClass;
         methodDescriptions = new HashMap<>();
         MyJavaAgent.initialize();
-
     }
 
     public Description getDescription() {
@@ -54,53 +58,41 @@ public class BindRunner extends Runner {
 
         try {
 
-            ClassPool cp = ClassPool.getDefault();
-
-
             Object instance = testClass.newInstance();
 
             methodDescriptions.forEach((method, description) ->
             {
                 try {
 
-                    CtClass cc = cp.get("Calculate");
-
-
-                    // Without the call to "makePackage()", package information is lost
-                    cp.makePackage(cp.getClassLoader(), "");
-                    CtMethod m = cc.getDeclaredMethod("addTogether");
-
-
-                    m.insertBefore("{System.out.print(\"Oh, say no to \");}");
-                    m.insertAfter("{System.out.print(\"And say - Hi World\");}");
-                    // Changes are not persisted without a call to "toClass()"
-
-                    final byte[] bytes = cc.toBytecode();
-
-                    MyJavaAgent.addTransformer(
-                            new ClassFileTransformer() {
-                                @Override
-                                public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
-                                    if (className != null && className.equals("Calculate")) {
-                                        return bytes;
-                                    } else {
-                                        return classfileBuffer;
-                                    }
-                                }
-                            }
-
-                    );
-
                     runNotifier.fireTestStarted(description);
                     method.invoke(instance);
+
+                    MyJavaAgent.redefineClass(
+                            new ClassDefinition(
+                                    Calculate.class,
+                                    new DynamicCodeInsertion().getBytes(
+                                            "Calculate",
+                                            "addTogether")
+                            )
+                    );
+
+                    try {
+                        method.invoke(instance);
+                        fail();
+                    } catch (InvocationTargetException e) {
+                        if (!(e.getCause() instanceof AssertionError)) {
+                            throw e;
+                        }
+                    }
+
                     runNotifier.fireTestFinished(description);
                 }
                 catch(AssumptionViolatedException e) {
-                    Failure failure = new Failure(description, e.getCause());
+                    Failure failure = new Failure(description, e.getCause() != null ? e.getCause(): e.fillInStackTrace());
                     runNotifier.fireTestAssumptionFailed(failure);
                 }
                 catch(Throwable e) {
-                    Failure failure = new Failure(description, e.getCause());
+                    Failure failure = new Failure(description, e.getCause() != null ? e.getCause(): e.fillInStackTrace());
                     runNotifier.fireTestFailure(failure);
                 }
                 finally {

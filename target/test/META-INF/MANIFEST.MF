@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Archiver-Version: Plexus Archiver
-Created-By: Apache Maven 3.6.1
-Built-By: alewatts
-Build-Jdk: 11.0.1
+Created-By: Apache Maven 3.5.2
+Built-By: alex
+Build-Jdk: 12
 Class-Path: lib/javassist-3.18.1-GA.jar
 Specification-Title: bind
 Specification-Version: 1.0-SNAPSHOT

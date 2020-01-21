@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 @RunWith(BindRunner.class)
 public class CalculateTest {
 
-    //@TestOf(clazz = Calculate.class, name = "addTogether")
+    @TestOf(clazz = "Calculate", name = "addTogether")
     @Test
     public void testAdd() {
         int one = 1;

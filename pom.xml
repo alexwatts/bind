@@ -10,8 +10,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>8</source>
-                    <target>8</target>
+                    <source>12</source>
+                    <target>12</target>
                 </configuration>
             </plugin>
 
@@ -43,20 +43,18 @@
     <groupId>com.ajw</groupId>
     <artifactId>bind</artifactId>
 
-
     <dependencies>
         <dependency>
             <groupId>org.javassist</groupId>
             <artifactId>javassist</artifactId>
-            <version>3.18.1-GA</version>
-        </dependency>
-
-        <dependency>
+            <version>3.23.1-GA</version>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
+
         </dependency>
+
     </dependencies>
 
 </project>

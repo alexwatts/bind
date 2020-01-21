@@ -8,11 +8,4 @@ public class Calculate {
         return a + b;
     }
 
-    private double addAnother(double a, double b) {
-        return a + b;
-    }
-
-    private void somethingElse() {
-
-    }
 }
