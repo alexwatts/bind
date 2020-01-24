@@ -3,7 +3,7 @@ import java.lang.management.ManagementFactory;
 
 public class MyJavaAgentLoader {
 
-    private static final String jarFilePath = "/Users/alex/bind/target/bind-1.0-SNAPSHOT.jar";
+    private static final String jarFilePath = "/Users/alewatts/development/bind/target/bind-1.0-SNAPSHOT.jar";
 
     public static void loadAgent() {
 
